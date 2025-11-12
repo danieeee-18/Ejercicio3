@@ -1,11 +1,73 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="contenedor-grid">
+  <header class="cabecera-panel">
+    <h1>Panel de Control</h1>
+    <div class="info-usuario">
+      Usuario: admin
+    </div>
+  </header>
+  <aside class="menu-lateral">
+    <nav class="navegacion"></nav>
+    <ul>
+      <li><a  class="activo"  href="#">Inicio</a></li>
+      <li><a href="#">Usuarios</a></li>
+      <li><a href="#">Estadisticas</a></li>
+      <li><a href="#">Configuracion</a></li>
+      <li><a href="#">Cerrar Sesión</a></li>
+    </ul>
+  </aside>
+  <main class="zona-principal">
+
+    <div class="stats-grid">
+
+      <article class="stat-card">
+        <div class="card-header">
+          <h3>Usuario Registrados</h3>
+          <span class="etiqueta activo">Activo</span>
+        </div>
+        <div class="stat-numero"> 1200 </div>
+          <p>Actualmente hay <strong>1280 </strong>usuarios activos en la plataforma.</p>      
+        
+        </article>
+
+        <article class="stat-card">
+                    <div class="card-header">
+                        <h3>Tráfico web</h3>
+                        <span class="etiqueta normal">Normal</span>
+                    </div>
+                    <div class="stat-numero">5200</div>
+                    <p>En las últimas 24h se registraron más de <strong>5.200</strong> visitas.</p>
+         </article>
+
+         <article class="stat-card">
+                    <div class="card-header">
+                        <h3>Errores del sistema</h3>
+                        <span class="etiqueta atencion">Atención</span>
+                    </div>
+                    <div class="stat-numero">3</div>
+                    <p>Se detectaron <strong> 3 incidencias</strong> pendientes de revisión.</p>
+         </article>
+
+         <article class="stat-card">
+                    <div class="card-header">
+                        <h3>Servicios en línea</h3>
+                        <span class="etiqueta ok">OK</span>
+                    </div>
+                    <div class="stat-numero">0</div>
+                    <p>Todos los servicios funcionan correctamente.</p>
+          </article>
+          </div>
+  </main>
+        <footer class="pie-pagina-panel">
+            <p>&copy; 2025 ControlSys - Panel de administración</p>
+        </footer>  </div>
+</body>
 </html>

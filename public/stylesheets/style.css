@@ -1,8 +1,137 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
 }
+.contenedor-grid{
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "cabecera cabecera"
+    "menu main"
+    "pie pie";
+  min-height: 100vh;
 
-a {
-  color: #00B7FF;
+}
+.cabecera-panel{
+  grid-area:cabecera;
+  background-color: #2137d7;
+  color:white;
+}
+.menu-lateral{
+  grid-area:menu;
+  background-color: #d5d6d6;
+  border-right: 1px solid #d5d6d6;
+}
+.zona-principal{
+  grid-area:main;
+  padding: 40px;
+}
+.pie-pagina-panel{
+  grid-area:pie;
+  background-color: #2137d7;
+  color:white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+.pie-pagina-panel p{
+  margin:0;
+}
+.cabecera-panel{
+  grid-area:cabecera;
+  background-color: #2137d7;
+  color: white;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+.cabecera-panel h1{
+  margin:10px;
+  font-size: 1.5rem;
+}
+.info-usuario{
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.menu-lateral{
+  grid-area:menu;
+  background-color: #d5d6d6;
+  padding:50px;
+  border-right: 1px solid #c0c0c0;
+}
+.menu-lateral ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.menu-lateral a{
+  text-decoration: none;
+  color:#333;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 12px 15px;
+  display:block;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+.menu-lateral a:hover{
+  background-color: #e9ecef;
+  color:#000;
+}
+.menu-lateral li.activo  a{
+  background-color: #5c677d;
+  color:white;
+}
+.stats-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.stat-card{
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.card-header h3{
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2137d7;
+}
+.etiqueta{
+  padding: 4px 10px;
+  border-radius:4px ;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  background-color: #2137d7;
+}
+.stat-numero{
+  font-size: 10rem;
+  font-weight: 400;
+  color:#767676;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 50px;
+} 
+.stat-card p{
+  font-size: 1rem;
+  color:#666;
+  text-align: center;
+  margin:0;
 }
